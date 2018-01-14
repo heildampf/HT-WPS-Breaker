@@ -2191,7 +2191,7 @@ case $menu in
                       then
                            Ver_Mon_Fun
 						   trap kill_wash SIGINT
-						   wash -i $mon -o ${Temporary}/wash_nf.txt > /dev/null &
+						   wash -i $mon -o ${Temporary}/wash.txt > /dev/null &
 						   WashID="$!"
 						   disown $WashID
 						   for ((c=0; c<=3; c++))
@@ -2220,7 +2220,7 @@ case $menu in
 							 count_rot=0
 							 while [ $Quit == 0 ]
 								 do
-								   cat ${Temporary}/wash_nf.txt | sed '1,2d' > ${Temporary}/wash_nf.txt
+								   cat ${Temporary}/wash.txt | sed '1,2d' > ${Temporary}/wash_nf.txt
 								   line=`cat ${Temporary}/wash_nf.txt | sed -n ${NL}p 2> /dev/null`
 								   if [ "$line" != "" ]
 								      then
