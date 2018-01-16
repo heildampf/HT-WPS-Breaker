@@ -2184,7 +2184,7 @@ echo -e -n "$White    ${Red} [${Cyan}!${Red}]$White Type the$BRed ID$White of yo
 read menu
 menu=`expr $menu + 0 2> /dev/null`
 case $menu in
-             "1")
+             "A")
 			     Ver_Pckg_Tools
 				 Ver_Mon_WCar_Fun
                  if [ "$VerMon" != "" ]
@@ -2745,13 +2745,13 @@ case $menu in
                   ID=`expr $ID + 0 2> /dev/null`
                   echo ""
                   case $ID in
-                               "1")
+                               "A")
                                    VerMon=""
                                    VerCar=`iwconfig 2>&1 | grep 'ESSID' | wc -l`
                                    Ver_Mon_WCar_Fun
                                    mode_monitor=no
                                    ;;
-							   "2")
+							   "B")
 						           cou_mon=`iwconfig 2>&1 | grep 'Mode:Monitor' | wc -l`
 						           if [ $cou_mon -ge 1 ]
 						                then
