@@ -2184,7 +2184,7 @@ echo -e -n "$White    ${Red} [${Cyan}!${Red}]$White Type the$BRed ID$White of yo
 read menu
 menu=`expr $menu + 0 2> /dev/null`
 case $menu in
-             "A")
+             "1")
 			     Ver_Pckg_Tools
 				 Ver_Mon_WCar_Fun
                  if [ "$VerMon" != "" ]
@@ -2745,7 +2745,7 @@ case $menu in
                   ID=`expr $ID + 0 2> /dev/null`
                   echo ""
                   case $ID in
-                               "A")
+                               "1")
                                    VerMon=""
                                    VerCar=`iwconfig 2>&1 | grep 'ESSID' | wc -l`
                                    Ver_Mon_WCar_Fun
